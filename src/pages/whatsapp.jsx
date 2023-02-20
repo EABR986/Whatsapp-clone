@@ -1,7 +1,11 @@
+
+
 import React, { useState, useEffect } from "react";
 import LeftMenu from "../components/LeftMenu";
 
 import LoadingScreen from "../components/LoadingScreen";
+import ChatDetail from "../components/ChatDetail";
+
 
 function WhatsApp() {
   const [progress, setProgress] = useState(0);
@@ -35,7 +39,7 @@ function WhatsApp() {
 
             {/* ChatDetail */}
             <div id="chat-detail-container" className="bg-[url('assets/images/load.jpg')] min-w-[415px] max-w-[1120px] w-100 h-100">
-              
+              <ChatDetail />
             </div>
           </div>
         </div>
