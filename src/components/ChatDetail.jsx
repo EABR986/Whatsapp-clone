@@ -7,7 +7,6 @@ import { HiDotsVertical } from "react-icons/hi";
 import { BiHappy } from "react-icons/bi";
 import { AiOutlinePaperClip } from "react-icons/ai";
 import { BsFillMicFill } from "react-icons/bs";
-import { cs1, cs2 } from "../assets/whatsapp";
 import { getTime } from "../logic/whatsapp";
 
 function ChatDetail({pp}) {
