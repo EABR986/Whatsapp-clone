@@ -1,5 +1,5 @@
 {
-  "name": "whatsapp",
+  "name": "whatsapp-clone-yt",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,6 +39,6 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.2.2"
   }
 }
