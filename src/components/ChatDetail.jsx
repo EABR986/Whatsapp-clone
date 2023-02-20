@@ -9,7 +9,7 @@ import { AiOutlinePaperClip } from "react-icons/ai";
 import { BsFillMicFill } from "react-icons/bs";
 import { getTime } from "../logic/whatsapp";
 
-function ChatDetail({pp}) {
+function ChatDetail({pp, user}) {
   const [messages, setMessages] = useState(messagesData);
   const [typing, setTyping] = useState(false);
 
@@ -123,6 +123,7 @@ function ChatDetail({pp}) {
         className="bg-[#0a131a] bg-[url('assets/images/bg.webp')] bg-contain overflow-y-scroll h-100"
         style={{ padding: "12px 7%" }}
       >
+
         {messages.map((msg) => (
           <Message
             msg={msg.msg}
@@ -130,6 +131,8 @@ function ChatDetail({pp}) {
             isLink={msg.isLink}
             img={msg.img}
             sent={msg.sent}
+            user={user}
+            
           />
         ))}
         <div ref={bottomRef} />

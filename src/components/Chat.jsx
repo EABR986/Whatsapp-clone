@@ -2,13 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import ChatDetail from "../components/ChatDetail";
 
-function Chat({ pp, contact, msg, time, unreadMsgs, active }) {
+function Chat({ pp, contact, msg, time, unreadMsgs, active, user }) {
 
   
 
   const handleClick = () => {
     const chatDiv = document.getElementById('chat-detail-container');
-    const componente = <ChatDetail pp={pp} />;
+    const componente =
+     <ChatDetail 
+     pp={pp} 
+     user={user}
+     />;
     ReactDOM.render(componente, chatDiv);
   }
 

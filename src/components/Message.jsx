@@ -1,11 +1,12 @@
 import React from "react";
 
-function Message({ msg, time, isLink, img, sent }) {
+function Message({ msg, time, isLink, img, sent,user, status }) {
   return (
     // Message container
     <div
       className={`flex justify-center items-center rounded-md w-fit my-1 ${
-        sent ? "bg-[#005c4b] ml-auto" : "bg-[#202d33] mr-auto"
+      sent === user? "bg-[#005c4b] ml-auto" : "bg-[#202d33] mr-auto"
+        
       }`}
     >
       {/* Image message */}

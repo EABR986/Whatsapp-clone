@@ -46,6 +46,8 @@ function Chats({ filter }) {
             unreadMsgs={chat.unreadMsgs}
             active={i === 0}
             key={chat.time}
+            user={chat.user}
+            status={chat.status}
             
           />
         );
