@@ -1,14 +1,16 @@
 import React from "react";
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom";
 import ChatDetail from "../components/ChatDetail";
 
 function Chat({ pp, contact, msg, time, unreadMsgs, active }) {
 
+  
 
-  function handleClick() {
-    ReactDOM.createRoot(document.getElementById('chat-detail-container')).render(<ChatDetail pp={pp}/>,);
-   
-  };
+  const handleClick = () => {
+    const chatDiv = document.getElementById('chat-detail-container');
+    const componente = <ChatDetail pp={pp} />;
+    ReactDOM.render(componente, chatDiv);
+  }
 
   return (
     // Chat container
@@ -52,6 +54,7 @@ function Chat({ pp, contact, msg, time, unreadMsgs, active }) {
           
         </div>
       </div>
+    
     </div>
   );
 }

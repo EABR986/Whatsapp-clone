@@ -13,9 +13,7 @@ function Chats({ filter }) {
     setChats(newChats);
   }, [filter]);
 
-  function handleClick() {
-    console.log('El botón fue clickeado');
-  };
+
 
   return (
     // Chats main container
