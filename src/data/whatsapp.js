@@ -21,7 +21,6 @@ export const chatsData = [
     time: "12:15 pm",
     unreadMsgs: null,
     user: false,
-    
   },
  
  

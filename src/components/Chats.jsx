@@ -5,6 +5,7 @@ import { ImFolderDownload } from "react-icons/im";
 
 function Chats({ filter }) {
   const [chats, setChats] = useState(chatsData);
+  const [selectedDivIndex, setSelectedDivIndex] = useState(null);
 
   useEffect(() => {
     const newChats = filter
@@ -36,7 +37,7 @@ function Chats({ filter }) {
       </div>
 
       {/* Chats */}
-      {chats.map((chat, i) => {
+      {chats.map((chat, index) => {
         return (
           <Chat
             pp={chat.pp}
@@ -44,10 +45,12 @@ function Chats({ filter }) {
             msg={chat.msg}
             time={chat.time}
             unreadMsgs={chat.unreadMsgs}
-            active={i === 0}
-            key={chat.time}
+            key={index}
+            i={index}
             user={chat.user}
             status={chat.status}
+            style={{ backgroundColor: selectedDivIndex === index ? 'bg-[#202d33]' : '' }}
+            onClick={() => setSelectedDivIndex(index)}
             
           />
         );

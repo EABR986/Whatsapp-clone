@@ -32,7 +32,7 @@ function ChatDetail({pp, user}) {
     addMessage({
       img: {pp},
       time: getTime(),
-      sent: {user},
+      sent: {user },
     });
   };
 // this checks if the input is empty or not

@@ -2,11 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import ChatDetail from "../components/ChatDetail";
 
-function Chat({ pp, contact, msg, time, unreadMsgs, active, user }) {
+
+
+function Chat({ pp, contact, msg, time, unreadMsgs, user, i }) {
+
+ 
+
 
   
 
   const handleClick = () => {
+       
     const chatDiv = document.getElementById('chat-detail-container');
     const componente =
      <ChatDetail 
@@ -14,15 +20,18 @@ function Chat({ pp, contact, msg, time, unreadMsgs, active, user }) {
      user={user}
      />;
     ReactDOM.render(componente, chatDiv);
+    
+
   }
 
   return (
     // Chat container
     <div onClick={handleClick}
     
-      className={`flex justify-between items-center cursor-pointer w-100 h-[85px] px-3 hover:bg-[#202d33] ${
-        active ? "bg-[#202d33]" : ""
-      }`}
+    
+      className={`flex justify-between items-center cursor-pointer w-100 h-[85px] px-3 hover:bg-[#202d33] $
+    `}
+    
     >
       {/* Profile picture */}
       <img
